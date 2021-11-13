@@ -10,6 +10,13 @@
   </head>
 
   <body>
+
+  <nav class="navbar navbar-expand navbar-dark bg-info d-flex justify-content-around">
+              <%=link_to"Study App",posts_path,class: "navbar-brand text-white"%>
+      <div class="d-flex flex-nowrap ">
+              <%= link_to "記録する", new_post_path, class: "navbar-brand text-white"%>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
