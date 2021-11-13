@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).per(7)
     @post = current_user.posts.sum(:time)
 
   end
