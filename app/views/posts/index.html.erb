@@ -5,6 +5,7 @@
 
 <div class = "d-flex align-items-center justify-content-center flex-wrap col-12 mt-5 ml-3">
     <% @posts.each do |post| %>
+    <% if current_user.id == post.user_id %>
         <div class  = "bg-light  border border-dark rounded-pill col-6 d-flex flex-nowrap mb-3 mr-5">
             <p class = "mt-4 ml-5"><%= post.title%>
             <p class = "mt-4 ml-5"><%= post.time %>時間 </p>
@@ -15,6 +16,7 @@
               <p><%= link_to "削除", post_path(post), method: :delete ,class: "text-danger mr-3", data: { confirm: '削除してよろしいですか?' } %></p>
             </div>
         </div>
+    <%end%>
     <%end%>
 </div>
 
