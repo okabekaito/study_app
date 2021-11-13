@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      post:
+    attributes:
+      post:
+        title: タイトル
+        contents: 内容
+        time: 勉強時間
