@@ -1,0 +1,4 @@
+        <% if !user_signed_in?%>
+        <%= link_to 'ゲストログイン（閲覧用）', hellos_guest_sign_in_path, method: :post %>
+        <%= link_to 'ログイン画面へ', user_session_path, method: :post %>
+        <%end%>
