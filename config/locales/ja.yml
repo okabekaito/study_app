@@ -7,3 +7,10 @@ ja:
         title: タイトル
         contents: 内容
         time: 勉強時間
+  simple_calendar:
+    previous: 前の月へ
+    next: 次の月へ
+    calendar:
+      title: タイトル
+      memo: メモ
+      start_time: 時間

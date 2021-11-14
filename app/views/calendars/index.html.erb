@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<div class="toppage">
+<h1 class="top">カレンダー</h1>
+<div class="text-right mr-5">
+  <%= link_to "カレンダー登録", new_calendar_path%>
+</div>
+
+<br>
+
+<div class="row">
+<div class="col-11 d-flex justify-content-center flex-wrap ml-5 ">
+	<div class="schedule">今後の予定一覧</div>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th>タイトル</th>
+      <th>日程</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calendars.each do |calendar| %>
+      <tr>
+        <td><%= link_to calendar.title , calendar %></td>
+        <td><%= calendar.start_time.strftime("%m-%d") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<br>
+<div class="col-10 pr-4">
+<%= month_calendar events: @calendars do |date, calendars| %>
+  <%= date.day %>
+
+  <% calendars.each do |calendar| %>
+    <div>
+      <%= link_to calendar.title, calendar %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+</div>
+</div>

@@ -17,6 +17,9 @@
               <%= link_to "記録する", new_post_path, class: "navbar-brand text-white"%>
       </div>
       <div class="d-flex flex-nowrap ">
+              <%= link_to "カレンダー", calendars_index_path, class: "navbar-brand text-white"%>
+      </div>
+      <div class="d-flex flex-nowrap ">
               <%= link_to "ログアウト", destroy_user_session_path, :method => :delete, class: "nav-link text-white " %>
       </div>
     </nav>
