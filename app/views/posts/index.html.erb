@@ -6,14 +6,17 @@
 <div class = "d-flex align-items-center justify-content-center flex-wrap col-12 mt-5 ml-3">
     <% @posts.each do |post| %>
       <% if current_user.id == post.user_id %>
-          <div class  = "bg-light  border border-dark rounded-pill col-6 d-flex flex-nowrap mb-3 mr-5">
-              <p class = "mt-4 ml-5"><%= post.title%>
-              <p class = "mt-4 ml-5"><%= post.time %>時間 </p>
-              <p class = "mt-4 ml-5"><%= post.created_at %></p>
-              <div class = "d-flex flex-nowrap mt-4 ml-3">
-                <p><%= link_to '詳細', post,class: "text-primary mr-3" %></p>
-                <p><%= link_to "編集", edit_post_path(post),class: "text-success mr-3" %></p>
-                <p><%= link_to "削除", post_path(post), method: :delete ,class: "text-danger mr-3", data: { confirm: '削除してよろしいですか?' } %></p>
+            <div class="row mb-3 border border-dark col-9">
+
+              <p class = "col-4 themed-grid-col h4"><%= post.title%>
+              <p class = "col-4 themed-grid-col h4"><%= post.time %>時間 </p>
+              <p class = "col-4 themed-grid-col h5"><%= post.created_at %></p>
+              <div class = "d-flex flex-nowrap  ml-3 text-right">
+              <%= link_to post do %>
+                <i class="fas fa-search btn btn-primary text-white"></i>
+              <% end %>
+
+
               </div>
           </div>
       <%end%>
