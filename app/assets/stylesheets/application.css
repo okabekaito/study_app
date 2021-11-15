@@ -20,3 +20,7 @@
 .button {
   color: #078080;
 }
+a:visited {
+  color: rgb(40, 167, 226);
+  text-decoration: none;
+}
