@@ -9,20 +9,23 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "hellos", :media => "all" %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   </head>
 
   <body>
 <% if user_signed_in? && current_user.id  %>
-  <nav class="navbar navbar-expand navbar-dark bg-info d-flex justify-content-around fixed-bottom">
-              <%=link_to"Study App",posts_path,class: "navbar-brand text-white"%>
+  <nav class="navbar navbar-expand nav d-flex justify-content-around fixed-bottom">
       <div class="d-flex flex-nowrap ">
-              <%= link_to "記録する", new_post_path, class: "navbar-brand text-white"%>
+              <%=link_to"ホーム",posts_path,class: "navbar-brand text-white"%><i class="fas fa-home text-white fa-2x mt-1"></i>
       </div>
       <div class="d-flex flex-nowrap ">
-              <%= link_to "カレンダー", calendars_index_path, class: "navbar-brand text-white"%>
+              <%= link_to "記録する", new_post_path, class: "navbar-brand text-white"%><i class="fas fa-book-open text-white fa-2x mt-1"></i>
       </div>
       <div class="d-flex flex-nowrap ">
-              <%= link_to "ログアウト", destroy_user_session_path, :method => :delete, class: "nav-link text-white " %>
+              <%= link_to "カレンダー", calendars_index_path, class: "navbar-brand text-white"%><i class="fas fa-calendar-week text-white fa-2x	"></i>
+      </div>
+      <div class="d-flex flex-nowrap ">
+              <%= link_to "ログアウト", destroy_user_session_path, :method => :delete, class: "nav-link text-white " %><i class="fas fa-sign-out-alt text-white fa-2x	mt-1"></i>
       </div>
     </nav>
 <%end%>
