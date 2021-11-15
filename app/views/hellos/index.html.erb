@@ -1,4 +1,56 @@
-        <% if !user_signed_in?%>
-        <%= link_to 'ゲストログイン（閲覧用）', hellos_guest_sign_in_path, method: :post %>
-        <%= link_to 'ログイン画面へ', user_session_path, method: :post %>
-        <%end%>
+<div class = "hellos pb-5">
+        <div class = "d-flex justify-content-center flex-wrap">
+                <h1 class = "col-12 text-center">ようこそ、駆け出しのためのツールへ</h1>
+                        <%= image_tag'IMG_0349.jpg', alt: "パソコンに向かう女の子" ,class:'icon mt-5 mr-5'  %>
+                        <div class = "mt-5">
+
+                                <% if !user_signed_in?%>
+                                <div class = "ml-3">
+                                        <h5 class = "mt-5">あなたの勉強をサポートします</h5>
+                                        <div class="button-80 ml-5 mt-3 col-6" >
+                                        <%= link_to 'ゲストログイン', hellos_guest_sign_in_path, method: :post %>
+                                        </div>
+                                        <div class="button-80 ml-5 mt-4 col-6" >
+                                        <%= link_to 'ログイン', user_session_path, method: :post %>
+                                        </div>
+                                </div>
+                                <%end%>
+                        </div>
+        </div>
+                <div class = "container mb-5">
+                                <h2 class = "text-center mt-5 ">特徴</h2>
+        
+                                <div class = "mt-4 box mb-5 mt-5 ">
+                                <h4 class = 'text-center mt-5'>学習した内容と時間を記録、スケジュールを管理するためのアプリケーションです。モチベーションを維持して勉強し習慣化できることを目的としています。</h4>
+                                <div class = "text-center">
+                                        <%= image_tag'IMG_0351.jpg', alt: "メモをする女の子" ,class:'icon1 '%>
+                                </div>
+                                </div>
+                                <h3 class = "text-center mt-5 ">使い方</h3>
+
+                                <div class = "mt-4 box mb-5  ">
+                                        <h5 class = " text-center">01</h5>
+                                        <h4 class = 'text-center mt-4'>アプリ内のカレンダーにメモして目標を定めよう</h4>
+                                <div class = "text-center">
+                                        <%= image_tag'IMG_0350.jpg', alt: "メモをする女の子" ,class:'icon1 '%>
+                                </div>
+                                </div>
+
+                                <div class = "mt-4 box mb-5  ">
+                                        <h5 class = " text-center">02</h5>
+                                        <h4 class = 'text-center mt-4'>1日の勉強内容、時間を記録しよう</h4>
+                                <div class = "text-center">
+                                        <%= image_tag'IMG_0352.jpg', alt: "メモをする女の子" ,class:'icon1 '%>
+                                </div>
+                                </div>
+
+                                <div class = "mt-4 box  ">
+                                        <h5 class = " text-center">03</h5>
+                                        <h4 class = 'text-center mt-4'>今までの勉強記録、合計時間を確認しよう</h4>
+                                <div class = "text-center">
+                                        <%= image_tag'IMG_0353.jpg', alt: "メモをする女の子" ,class:'icon1 '%>
+                                </div>
+                                </div>
+                        
+                </div>
+</div>
