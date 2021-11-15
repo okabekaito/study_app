@@ -21,6 +21,9 @@
   color: #078080;
 }
 a:visited {
-  color: rgb(40, 167, 226);
+  color: rgb(46, 93, 114);
   text-decoration: none;
+}
+body {
+  background-color: #faeee7;
 }
