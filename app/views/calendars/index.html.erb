@@ -1,14 +1,13 @@
 <div class="toppage">
 <h1 class="top">カレンダー</h1>
 <div class="text-right mr-5">
-  <%= link_to "カレンダー登録", new_calendar_path%>
+  <%= link_to "カレンダー登録", new_calendar_path,class: "button-32"%>
 </div>
 
 <br>
 
 <div class="row">
 <div class="col-11 d-flex justify-content-center flex-wrap ml-5 ">
-	<div class="schedule">今後の予定一覧</div>
 <table class="table">
   <thead class="thead-light">
     <tr>
@@ -20,7 +19,9 @@
   <tbody>
     <% @calendars.each do |calendar| %>
       <tr>
-        <td><%= link_to calendar.title , calendar %></td>
+        <td><%= calendar.title%> <%= link_to(calendar) do %>
+        <i class="fas fa-search btn btn-primary text-white"></i>
+        <% end %></td>
         <td><%= calendar.start_time.strftime("%m-%d") %></td>
       </tr>
     <% end %>

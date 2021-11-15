@@ -1,5 +1,13 @@
 <div class="show">
+<div class="col-11 d-flex justify-content-end flex-wrap ml-5 mb-4 ">
+        <%= link_to edit_calendar_path(@calendar)do %>
+        <i class= "fas fa-edit btn btn-secondary text-white fa-3x	"></i>
+        <% end %>
 
+          <%= link_to calendar_path(@calendar.id) , class: "ml-3 btn btn-danger text-white", method: :delete do %>
+    <i class="far fa-trash-alt fa-2x"></i> 
+  <% end %>
+</div>
 <div class = "card mb-4">
   <div class= "card-header">
     <h3>タイトル</h3>
@@ -33,7 +41,4 @@
   </div>
 </div>
 </div>
-<div class="col-11 d-flex justify-content-center flex-wrap ml-5 ">
-<%= link_to '編集', edit_calendar_path(@calendar),class: "text-success mr-3" %>
-<%= link_to '消去',calendar_path(@calendar.id),class: "text-danger mr-3", method: :delete, data: { confirm: '削除しますか?' } %>
-</div>
+
