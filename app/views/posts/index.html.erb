@@ -6,9 +6,9 @@
 <div class = "d-flex align-items-center justify-content-center flex-wrap col-12 mt-5 ml-3">
     <% @posts.each do |post| %>
       <% if current_user.id == post.user_id %>
-            <div class="row mb-3 border-bottom border-dark col-9">
+            <div class="row mb-3 border-bottom border-dark col-12">
 
-              <p class = "col-4 themed-grid-col h4"><%= post.title%>
+              <p class = "col-6 themed-grid-col h4"><%= post.title%>
               <p class = "col-4 themed-grid-col h5"><%= post.created_at %></p>
               <div class = "d-flex flex-nowrap  ml-3 text-right">
               <%= link_to post do %>
