@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
-  root'hellos#index'
+  root 'hellos#index'
   resources :posts
   post '/hellos/guest_sign_in', to: 'hellos#guest_sign_in'
   resources :calendars
