@@ -22,11 +22,16 @@
 .button-32:not(:disabled):hover,
 .button-32:not(:disabled):focus {
   outline: 0;
-  background: #f4e603;
+
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 .button-32:disabled {
   filter: saturate(0.2) opacity(0.5);
   cursor: not-allowed;
+}
+.simple-calendar {
+  .has-events {
+    background: none;
+  }
 }
