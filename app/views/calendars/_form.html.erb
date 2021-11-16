@@ -1,3 +1,19 @@
+<%= form_with(model: calendar, local: true) do |form| %>
+  <div class = "d-flex justify-content-center col-12 flex-wrap text-center">
+    <% if calendar.errors.any? %>
+      <div id="error_explanation">
+        <h2>エラーがあります</h2>
+  
+        <ul>
+          <% calendar.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+  <% end %>
+
+
 <%= form_with(model: @calendar, local: true) do |form| %>
 
   <div class = "field  d-flex justify-content-center col-12 flex-wrap mt-5">
@@ -20,4 +36,5 @@
     <%= form.submit "投稿", class: "btn btn-primary col-10 "%>
     </div>
   </div>
+<% end %>
 <% end %>

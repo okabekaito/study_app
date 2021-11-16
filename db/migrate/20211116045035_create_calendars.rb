@@ -4,6 +4,7 @@ class CreateCalendars < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :memo
       t.datetime :start_time
+
       t.timestamps
     end
   end
