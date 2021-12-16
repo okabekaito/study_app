@@ -4,22 +4,30 @@
 </div>
 
 <div class = "d-flex align-items-center justify-content-center flex-wrap col-12 mt-5 ml-3">
-    <% @posts.each do |post| %>
-      <% if current_user.id == post.user_id %>
-            <div class="row mb-3 border-bottom border-dark col-12">
 
-              <p class = "col-6 themed-grid-col h4"><%= post.title%>
-              <p class = "col-4 themed-grid-col h5"><%= post.created_at %></p>
-              <div class = "d-flex flex-nowrap  ml-3 text-right">
-              <%= link_to post do %>
-                <i class="fas fa-search btn btn-primary text-white mb-3"></i>
-              <% end %>
-
-
-              </div>
-          </div>
-      <%end%>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">名前</th>
+        <th scope="col">更新日</th>
+        <th scope="col">詳細</th>
+      </tr>
+    </thead>
+        <% @posts.each do |post| %>
+              <% if current_user.id == post.user_id %>
+    <tbody>
+      <tr>
+        <td class = "col-4 themed-grid-col h5"><%= post.title%></td>
+        <td class = "col-4 themed-grid-col h5"><%= post.created_at %></td>
+        <td class = "col-4 themed-grid-col h5"><%= link_to post do %>
+          <i class="fas fa-search btn btn-primary text-white"></i>
+            <% end %></td>
+      </tr>
+    </tbody>
     <%end%>
+  <%end%>
+  </table>
+
 </div>
 <div class = "d-flex justify-content-center flex-wrap col-12 mb-5 mt-2">
     <%= paginate @posts%>
