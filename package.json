@@ -2,7 +2,7 @@
   "name": "study_app",
   "private": true,
   "engines": { 
-    "node": "16.13.1" 
+    "node": "14.18.2" 
  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
