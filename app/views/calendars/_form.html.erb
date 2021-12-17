@@ -17,18 +17,18 @@
 <%= form_with(model: @calendar, local: true) do |form| %>
 
   <div class = "field  d-flex justify-content-center col-12 flex-wrap mt-5">
-      <%= form.label :title , class: "from-control col-10"%>
-    <%= form.text_field :title, class: "from-control col-10"%>
+      <%= form.label :title , class: "form-control col-10"%>
+    <%= form.text_field :title, class: "form-control col-10"%>
     </div>
 
     <div class="field  d-flex justify-content-center col-12 flex-wrap">
-      <%= form.label :memo , class: "from-control col-10"%>
-    <%= form.text_field :memo , class: "from-control col-10"%>
+      <%= form.label :memo , class: "form-control col-10"%>
+    <%= form.text_field :memo , class: "form-control col-10"%>
     </div>
     
   <div class = "field  col-11 flex-wrap mt-3 text-center">
     <%= form.label :start_time %>
-    <%= form.datetime_select :start_time , class: "from-control col-10" %>
+    <%= form.datetime_select :start_time , class: "form-control col-10" %>
     </div>
   </div>
 

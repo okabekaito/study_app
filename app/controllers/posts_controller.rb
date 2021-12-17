@@ -5,8 +5,10 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.order('id desc').page(params[:page]).per(7)
+    @posts = Post.order('id DESC').page(params[:page]).per(7)
     @post = current_user.posts.sum(:time)
+    
+
   end
 
   # GET /posts/1 or /posts/1.json
@@ -66,6 +68,6 @@ class PostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:title, :contents, :time)
+    params.require(:post).permit(:title, :contents, :time, :tag_list)
   end
 end
