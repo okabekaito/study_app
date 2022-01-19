@@ -18,11 +18,12 @@
               <% if current_user.id == post.user_id %>
     <tbody>
       <tr>
-        <td class = "col-4 themed-grid-col h5"><%= post.title%></td>
-        <td class = "col-4 themed-grid-col h5"><%= post.created_at %></td>
-        <td class = "col-4 themed-grid-col h5"><%= post.tag %></td>
+      
+        <td class = "col-3 themed-grid-col h5"><%= post.title%></td>
+        <td class = "col-3 themed-grid-col h5"><%= post.created_at %></td>
+        <td class = "col-3 themed-grid-col h5 "><span class=' bg-info text-white  pb-2 pt-1 rounded '><%= post.tag %></span></td>
 </td>
-        <td class = "col-4 themed-grid-col h5"><%= link_to post do %>
+        <td class = "col-3 themed-grid-col h5"><%= link_to post do %>
           <i class="fas fa-search btn btn-primary text-white"></i>
             <% end %></td>
       </tr>
