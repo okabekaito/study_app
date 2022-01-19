@@ -6,6 +6,7 @@ ja:
       post:
         title: タイトル
         contents: 内容
+        tag: タグ
         time: 勉強時間
   simple_calendar:
     previous: 前の月へ
