@@ -20,9 +20,7 @@
       <tr>
         <td class = "col-4 themed-grid-col h5"><%= post.title%></td>
         <td class = "col-4 themed-grid-col h5"><%= post.created_at %></td>
-        <td class = "col-4 themed-grid-col h5  "><span class ="badge badge-primary p-2"><% post.tag_list.each do |tag| %>
-    <%= tag %></span>
-<% end %>
+        <td class = "col-4 themed-grid-col h5"><%= post.tag %></td>
 </td>
         <td class = "col-4 themed-grid-col h5"><%= link_to post do %>
           <i class="fas fa-search btn btn-primary text-white"></i>
