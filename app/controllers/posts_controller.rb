@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.order('id DESC').page(params[:page]).per(7)
+    @q = current_user.posts.ransack(params[:q])
+    @posts = @q.result(distinct: true).page(params[:page]).per(7)
     @post = current_user.posts.sum(:time)
     
 
