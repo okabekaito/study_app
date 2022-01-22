@@ -2,7 +2,7 @@
         <%= link_to edit_post_path(@post)do %>
         <i class= "fas fa-edit btn btn-secondary text-white fa-3x	"></i>
         <% end %>
-          <%= link_to post_path(@post) , class: "ml-3 btn btn-danger text-white", method: :delete do %>
+          <%= link_to post_path(@post) , class: "ml-3 btn btn-danger text-white", data: {confirm: '本当に削除しますか？'},method: :delete do %>
     <i class="far fa-trash-alt fa-2x"></i> 
   <% end %>
 </div>
