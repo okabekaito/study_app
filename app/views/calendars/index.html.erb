@@ -1,49 +1,50 @@
 <div class="toppage">
-<h1 class="top">カレンダー</h1>
-<div class="text-right mr-5">
-  <%= link_to "カレンダー登録", new_calendar_path,class: "button-32"%>
-</div>
+  <h1 class="top">カレンダー</h1>
+  <div class="text-right mr-5">
+    <%= link_to "カレンダー登録", new_calendar_path,class: "button-32"%>
+  </div>
 
-<br>
+  <br>
 
-<div class="row">
-<div class="col-11 d-flex justify-content-center flex-wrap ml-5 ">
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th>タイトル</th>
-      <th>日程</th>
-    </tr>
-  </thead>
+  <div class="row">
+    <div class="col-11 d-flex justify-content-center flex-wrap ml-5 ">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>タイトル</th>
+            <th>日程</th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @calendars.each do |calendar| %>
-      <tr>
-        <td><%= calendar.title%> <%= link_to(calendar) do %>
-        <i class="fas fa-search btn btn-primary text-white ml-3 fa-xs"></i>
-        <% end %></td>
-        <td><%= calendar.start_time.strftime("%m-%d") %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @calendars.each do |calendar| %>
+            <tr>
+              <td><%= calendar.title%> <%= link_to(calendar) do %>
+              <i class="fas fa-search btn btn-primary text-white ml-3 fa-xs"></i>
+              <% end %></td>
+              <td><%= calendar.start_time.strftime("%m-%d") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<br>
+      <br>
+      <br>
+      <div class="col-10 pr-4">
 
-
-<br>
-<div class="col-10 pr-4">
-
-<%= month_calendar events: @calendars do |date, calendars| %>
-  <%= date.day %>
-  <% calendars.each do |calendar| %>
-            <% if current_user.id == calendar.user_id %>
-    <div>
-      <%= link_to calendar.title, calendar %>
+        <%= month_calendar events: @calendars do |date, calendars| %>
+          <%= date.day %>
+          <% calendars.each do |calendar| %>
+            <div>
+              <%= link_to calendar.title, calendar %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-<% end %>
-<% end %>
+  </div>
 </div>
-</div>
-</div>
+<br>
+<br>
+<br>
+<br>
