@@ -71,8 +71,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :contents, :time, :tag)
   end
-
-  def search
-    @s_posts = Post.search(params[:search])
-  end
 end
