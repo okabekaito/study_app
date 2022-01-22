@@ -18,14 +18,12 @@
 
   <tbody>
     <% @calendars.each do |calendar| %>
-          <% if current_user.id == calendar.user_id %>
       <tr>
         <td><%= calendar.title%> <%= link_to(calendar) do %>
         <i class="fas fa-search btn btn-primary text-white ml-3 fa-xs"></i>
         <% end %></td>
         <td><%= calendar.start_time.strftime("%m-%d") %></td>
       </tr>
-            <% end %>
     <% end %>
   </tbody>
 </table>

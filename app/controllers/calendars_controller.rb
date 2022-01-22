@@ -5,7 +5,7 @@ class CalendarsController < ApplicationController
 
   # GET /calendars or /calendars.json
   def index
-    @calendars = Calendar.all
+    @calendars = current_user.calendars
   end
 
   # GET /calendars/1 or /calendars/1.json
